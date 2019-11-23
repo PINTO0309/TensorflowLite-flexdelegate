@@ -1,1 +1,1 @@
-
+# Model structure description
