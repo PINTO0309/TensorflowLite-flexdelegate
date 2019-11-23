@@ -3,8 +3,11 @@
 November 22, 2019, under construction.  
 
 ## 1. Environment
-- x86_64 PC + Ubuntu 18.04 (glibc2.27)
-- armv7l 
+- Ubuntu 18.04 (glibc2.27) + x86_64 PC 
+- Raspbian Buster (glibc2.28) + armv7l RaspberryPi3/4
+- Tensorflow v2.0.0
+- **[Bazel 0.26.1](https://github.com/PINTO0309/Bazel_bin.git)**
+
 ## 2. Models to be tested
 |No.|Model name|Note|
 |:--|:--|:--|
