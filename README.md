@@ -300,7 +300,6 @@ $ sudo bazel --host_jvm_args=-Xmx512m build \
 --copt=-fomit-frame-pointer \
 --copt=-DRASPBERRY_PI \
 --host_copt=-DRASPBERRY_PI \
---remote_http_cache=http://192.168.0.xx:9080 \
 //tensorflow/lite:libtensorflowlite.so
 ```
 ```bash
