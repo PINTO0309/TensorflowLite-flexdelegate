@@ -7,6 +7,7 @@ November 22, 2019, under construction.
 - Raspbian Buster (glibc2.28) + armv7l RaspberryPi3/4
 - Tensorflow v2.0.0
 - **[Bazel 0.26.1](https://github.com/PINTO0309/Bazel_bin.git)**
+- opnejdk-8-jdk
 
 ## 2. Models to be tested
 |No.|Model name|Note|
