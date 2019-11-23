@@ -1,6 +1,8 @@
 # TensorflowLite-flexdelegate
 
 November 22, 2019, under construction.  
+  
+TensorFlow Lite will continue to have TensorFlow Lite builtin ops optimized for mobile and embedded devices. However, TensorFlow Lite models can now use a subset of TensorFlow ops when TFLite builtin ops are not sufficient.
 
 ## 1. Environment
 - Ubuntu 18.04 (glibc2.27) + x86_64 PC 
@@ -293,8 +295,15 @@ $ sudo chmod 777 libtensorflowlite.so
 ```
 
 ## 4. How to generate a Tensorflow Lite model file with Flex Delegate enabled
+
 ## 5. Pre-built shared library
 ### 5-1. For Ubuntu 18.04
 **https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-x86_64_glibc2.27**  
 ### 5-2. For Raspbian Buster
 **https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-armv7l_glibc2.28**  
+
+## 6. Reference articles
+1. **[Select TensorFlow operators to use in TensorFlow Lite](https://www.tensorflow.org/lite/guide/ops_select)**  
+2. **[Shared library libtensorflowlite.so cannot be found after building from source](https://github.com/tensorflow/tensorflow/issues/33980)**  
+3. **[How to invoke the Flex delegate for tflite interpreters?](https://stackoverflow.com/questions/57658509/how-to-invoke-the-flex-delegate-for-tflite-interpreters)**  
+4. **[iwatake2222 / CNN_NumberDetector](https://github.com/iwatake2222/CNN_NumberDetector.git)**  
