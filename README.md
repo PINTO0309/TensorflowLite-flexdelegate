@@ -307,3 +307,6 @@ $ sudo chmod 777 libtensorflowlite.so
 2. **[Shared library libtensorflowlite.so cannot be found after building from source](https://github.com/tensorflow/tensorflow/issues/33980)**  
 3. **[How to invoke the Flex delegate for tflite interpreters?](https://stackoverflow.com/questions/57658509/how-to-invoke-the-flex-delegate-for-tflite-interpreters)**  
 4. **[iwatake2222 / CNN_NumberDetector](https://github.com/iwatake2222/CNN_NumberDetector.git)**  
+5. **[PINTO0309 / Tensorflow-bin](https://github.com/PINTO0309/Tensorflow-bin.git)**  
+6. **[PINTO0309 / TensorflowLite-bin](https://github.com/PINTO0309/TensorflowLite-bin.git)**  
+7. **[PINTO0309 / Bazel_bin](https://github.com/PINTO0309/Bazel_bin.git)**  
