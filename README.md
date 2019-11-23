@@ -74,11 +74,11 @@ Preconfigured Bazel build configs to DISABLE default on features:
     --config=nonccl         # Disable NVIDIA NCCL support.
 Configuration finished
 ```
-```
+```bash
 $ cd tensorflow/lite
 $ nano BUILD
 ```
-```
+```bzl
 tflite_cc_shared_object(
     name = "libtensorflowlite.so",
     linkopts = select({
@@ -101,15 +101,30 @@ tflite_cc_shared_object(
     ],
 )
 ```
-```
+```bash
 $ nano tools/make/Makefile
 ```
-```
+```makefile
 BUILD_WITH_NNAPI=true
 ↓
 BUILD_WITH_NNAPI=false
 ```
-
+```bash
+$ sudo bazel build \
+--config=monolithic \
+--config=noaws \
+--config=nohdfs \
+--config=noignite \
+--config=nokafka \
+--config=nonccl \
+--config=v2 \
+--define=tflite_convert_with_select_tf_ops=true \
+--define=with_select_tf_ops=true \
+//tensorflow/lite:libtensorflowlite.so
+```
+```bash
+$ sudo chmod 777 libtensorflowlite.so
+```
 ### 3-2. armv7l machine
 
 
