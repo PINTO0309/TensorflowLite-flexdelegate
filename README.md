@@ -22,7 +22,6 @@ November 22, 2019, under construction.
 ### 3-1. x86_64 machine
 ```bash
 $ cd ~
-$ cd ~
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPFILE=2048
 CONF_MAXSWAP=2048
@@ -46,11 +45,10 @@ $ sudo -H pip3 install -U --user six numpy wheel mock
 
 $ cd ~
 $ git clone https://github.com/PINTO0309/Bazel_bin.git
-$ cd Bazel_bin
-$ ./0.26.1/Ubuntu1604_x86_64/install.sh
+$ ./Bazel_bin/0.26.1/Ubuntu1604_x86_64/install.sh
 
 $ git clone -b v2.0.0 https://github.com/tensorflow/tensorflow.git
-$ cd ~/tensorflow
+$ cd tensorflow
 $ ./configure
 
 WARNING: ignoring LD_PRELOAD in environment.
@@ -180,11 +178,10 @@ $ sudo -H pip3 install -U --user six numpy wheel mock
 
 $ cd ~
 $ git clone https://github.com/PINTO0309/Bazel_bin.git
-$ cd Bazel_bin
-$ ./0.26.1/Raspbian_Debian_Buster_armhf/openjdk-8-jdk/install.sh
+$ ./Bazel_bin/0.26.1/Raspbian_Debian_Buster_armhf/openjdk-8-jdk/install.sh
 
 $ git clone -b v2.0.0 https://github.com/tensorflow/tensorflow.git
-$ cd ~/tensorflow
+$ cd tensorflow
 $ ./configure
 
 WARNING: ignoring LD_PRELOAD in environment.
