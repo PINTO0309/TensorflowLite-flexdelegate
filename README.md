@@ -1,4 +1,7 @@
 # TensorflowLite-flexdelegate
+
+November 22, 2019, under construction.  
+
 ## 1. Environment
 - x86_64 PC + Ubuntu 18.04 (glibc2.27)
 - armv7l 
