@@ -8,7 +8,7 @@ November 22, 2019, under construction.
 - Tensorflow v2.0.0
 - **[Bazel 0.26.1](https://github.com/PINTO0309/Bazel_bin.git)**
 - **[Bazel-Remote](https://github.com/buchgr/bazel-remote.git)**
-- opnejdk-8-jdk
+- opnejdk-8-jdk (**[for Raspbian Buster - openjdk-8-jdk](https://qiita.com/PINTO/items/612718c0ce4f1def6c6e)**)
 
 ## 2. Models to be tested
 |No.|Model name|Note|
