@@ -106,7 +106,7 @@ tflite_cc_shared_object(
 ```bash
 $ nano tools/make/Makefile
 ```
-```makefile
+```python
 BUILD_WITH_NNAPI=true
 ↓
 BUILD_WITH_NNAPI=false
