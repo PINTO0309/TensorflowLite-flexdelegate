@@ -22,6 +22,27 @@ November 22, 2019, under construction.
 ### 3-1. x86_64 machine
 ```bash
 $ cd ~
+$ cd ~
+$ sudo nano /etc/dphys-swapfile
+CONF_SWAPFILE=2048
+CONF_MAXSWAP=2048
+
+$ sudo systemctl stop dphys-swapfile
+$ sudo systemctl start dphys-swapfile
+
+$ wget https://github.com/PINTO0309/Tensorflow-bin/raw/master/zram.sh
+$ chmod 755 zram.sh
+$ sudo mv zram.sh /etc/init.d/
+$ sudo update-rc.d zram.sh defaults
+$ sudo reboot
+
+$ sudo apt-get install -y libhdf5-dev libc-ares-dev libeigen3-dev libatlas-base-dev libopenblas-dev openjdk-8-jdk
+$ sudo pip3 install keras_applications==1.0.8 --no-deps
+$ sudo pip3 install keras_preprocessing==1.1.0 --no-deps
+$ sudo pip3 install h5py==2.9.0
+$ sudo apt-get install -y openmpi-bin libopenmpi-dev
+$ sudo -H pip3 install -U --user six numpy wheel mock
+
 $ git clone -b v2.0.0 https://github.com/tensorflow/tensorflow.git
 $ cd ~/tensorflow
 $ ./configure
