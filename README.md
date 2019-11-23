@@ -6,6 +6,7 @@ November 22, 2019, under construction.
 - Ubuntu 18.04 (glibc2.27) + x86_64 PC 
 - Raspbian Buster (glibc2.28) + armv7l RaspberryPi3/4
 - Tensorflow v2.0.0
+- Tensorflow Lite
 - **[Bazel 0.26.1](https://github.com/PINTO0309/Bazel_bin.git)**
 - **[Bazel-Remote](https://github.com/buchgr/bazel-remote.git)**
 - opnejdk-8-jdk (**[for Raspbian Buster - openjdk-8-jdk](https://qiita.com/PINTO/items/612718c0ce4f1def6c6e)**)
