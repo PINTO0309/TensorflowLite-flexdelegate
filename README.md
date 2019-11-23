@@ -306,7 +306,7 @@ $ sudo chmod 777 libtensorflowlite.so
 
 ## 4. How to generate a Tensorflow Lite model file with Flex Delegate enabled
 ## 5. Pre-built shared library
-### For Ubuntu 18.04
+### 5-1. For Ubuntu 18.04
 **https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-x86_64_glibc2.27**  
-### For Raspbian Buster
+### 5-2. For Raspbian Buster
 **https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-armv7l_glibc2.28**  
