@@ -131,6 +131,31 @@ $ sudo chmod 777 libtensorflowlite.so
 ### 3-2. armv7l machine
 ```bash
 $ cd ~
+$ sudo nano /etc/dphys-swapfile
+CONF_SWAPFILE=2048
+CONF_MAXSWAP=2048
+
+$ sudo systemctl stop dphys-swapfile
+$ sudo systemctl start dphys-swapfile
+
+$ wget https://github.com/PINTO0309/Tensorflow-bin/raw/master/zram.sh
+$ chmod 755 zram.sh
+$ sudo mv zram.sh /etc/init.d/
+$ sudo update-rc.d zram.sh defaults
+$ sudo reboot
+
+$ sudo apt-get install -y libhdf5-dev libc-ares-dev libeigen3-dev libatlas-base-dev libopenblas-dev
+$ sudo pip3 install keras_applications==1.0.8 --no-deps
+$ sudo pip3 install keras_preprocessing==1.1.0 --no-deps
+$ sudo pip3 install h5py==2.9.0
+$ sudo apt-get install -y openmpi-bin libopenmpi-dev
+$ sudo -H pip3 install -U --user six numpy wheel mock
+
+$ cd ~
+$ git clone https://github.com/PINTO0309/Bazel_bin.git
+$ cd Bazel_bin
+$ ./0.26.1/Raspbian_Debian_Buster_armhf/openjdk-8-jdk/install.sh
+
 $ git clone -b v2.0.0 https://github.com/tensorflow/tensorflow.git
 $ cd ~/tensorflow
 $ ./configure
