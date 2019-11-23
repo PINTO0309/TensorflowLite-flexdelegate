@@ -43,6 +43,11 @@ $ sudo pip3 install h5py==2.9.0
 $ sudo apt-get install -y openmpi-bin libopenmpi-dev
 $ sudo -H pip3 install -U --user six numpy wheel mock
 
+$ cd ~
+$ git clone https://github.com/PINTO0309/Bazel_bin.git
+$ cd Bazel_bin
+$ ./0.26.1/Ubuntu1604_x86_64/install.sh
+
 $ git clone -b v2.0.0 https://github.com/tensorflow/tensorflow.git
 $ cd ~/tensorflow
 $ ./configure
