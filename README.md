@@ -9,6 +9,12 @@
 
 ## 2. How to build Tensorflow Lite shared library with Flex Delegate enabled
 ### 2-1. x86_64 machine
+```bash
+$ cd ~
+$ git clone -b v2.0.0 https://github.com/tensorflow/tensorflow.git
+$ cd ~/tensorflow
+$ ./configure
+```
 ### 2-2. armv7l machine
 
 
