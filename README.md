@@ -295,6 +295,8 @@ $ sudo chmod 777 libtensorflowlite.so
 ```
 
 ## 4. How to generate a Tensorflow Lite model file with Flex Delegate enabled
+### 4-1. ENet
+### 4-2. Learning-to-See-Moving-Objects-in-the-Dark
 
 ## 5. Pre-built shared library
 ### 5-1. For Ubuntu 18.04
