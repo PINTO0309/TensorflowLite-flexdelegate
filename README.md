@@ -340,3 +340,5 @@ tflite_convert -- \
 5. **[PINTO0309 / Tensorflow-bin](https://github.com/PINTO0309/Tensorflow-bin.git)**  
 6. **[PINTO0309 / TensorflowLite-bin](https://github.com/PINTO0309/TensorflowLite-bin.git)**  
 7. **[PINTO0309 / Bazel_bin](https://github.com/PINTO0309/Bazel_bin.git)**  
+8. **[Post-training quantization - Tensorflow official tutorial](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/performance/post_training_quantization.md)**  
+9. **[Post-training integer quantization - Tensorflow official tutorial](https://www.tensorflow.org/lite/performance/post_training_integer_quant)**  
