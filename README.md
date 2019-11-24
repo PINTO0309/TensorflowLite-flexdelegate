@@ -13,6 +13,7 @@ TensorFlow Lite will continue to have TensorFlow Lite builtin ops optimized for 
 - **[Bazel-Remote](https://github.com/buchgr/bazel-remote.git)**
 - opnejdk-8-jdk (**[for Raspbian Buster - openjdk-8-jdk](https://qiita.com/PINTO/items/612718c0ce4f1def6c6e)**)
 - **[OpenCV 4.1.2-openvino](https://github.com/PINTO0309/OpenVINO-bin.git)**
+- Python 3.6.8+
 
 ## 2. Models to be tested
 |No.|Model name|Note|
