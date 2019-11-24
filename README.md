@@ -296,8 +296,36 @@ $ sudo chmod 777 libtensorflowlite.so
 
 ## 4. How to generate a Tensorflow Lite model file with Flex Delegate enabled
 ### 4-1. ENet
+```bash
+$ cd ~/tensorflow
+$ sudo bazel run \
+--define=tflite_convert_with_select_tf_ops=true \
+--define=with_select_tf_ops=true \
+tflite_convert -- \
+--graph_def_file=enet.pb \
+--output_file=enet.tflite \
+--output_format=TFLITE \
+--inference_type=QUANTIZED_UINT8 \
+--input_arrays=input \
+--output_arrays=ENet/logits_to_softmax \
+--target_ops=TFLITE_BUILTINS,SELECT_TF_OPS \
+--post_training_quantize
+```
 ### 4-2. Learning-to-See-Moving-Objects-in-the-Dark
-
+```bash
+$ cd ~/tensorflow
+$ sudo bazel run \
+--define=tflite_convert_with_select_tf_ops=true \
+--define=with_select_tf_ops=true \
+tflite_convert -- \
+--graph_def_file=lsmod.pb \
+--output_file=lsmod.tflite \
+--output_format=TFLITE \
+--input_arrays=input \
+--output_arrays=output \
+--target_ops=TFLITE_BUILTINS,SELECT_TF_OPS \
+--allow_custom_ops
+```
 ## 5. Pre-built shared library
 ### 5-1. For Ubuntu 18.04
 **https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-x86_64_glibc2.27**  
