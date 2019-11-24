@@ -343,3 +343,4 @@ tflite_convert -- \
 8. **[Post-training quantization - Tensorflow official tutorial](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/performance/post_training_quantization.md)**  
 9. **[Post-training integer quantization - Tensorflow official tutorial](https://www.tensorflow.org/lite/performance/post_training_integer_quant)**  
 10. **[post_training_integer_quant.ipynb](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/performance/post_training_integer_quant.ipynb)**
+11. **[convert the checkpoint to SavedModel](https://stackoverflow.com/questions/56766639/how-to-convert-ckpt-to-pb)**
