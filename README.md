@@ -297,7 +297,7 @@ $ sudo chmod 777 libtensorflowlite.so
 ## 4. How to generate a Tensorflow Lite model file with Flex Delegate enabled
 ### 4-1. ENet
 ```bash
-$ cd ~/tensorflow
+$ cd ~/tensorflow/tensorflow/lite/python
 $ sudo bazel run \
 --define=tflite_convert_with_select_tf_ops=true \
 --define=with_select_tf_ops=true \
@@ -313,7 +313,7 @@ tflite_convert -- \
 ```
 ### 4-2. Learning-to-See-Moving-Objects-in-the-Dark
 ```bash
-$ cd ~/tensorflow
+$ cd ~/tensorflow/tensorflow/lite/python
 $ sudo bazel run \
 --define=tflite_convert_with_select_tf_ops=true \
 --define=with_select_tf_ops=true \
