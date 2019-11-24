@@ -7,7 +7,7 @@ TensorFlow Lite will continue to have TensorFlow Lite builtin ops optimized for 
 ## 1. Environment
 - Ubuntu 18.04 (glibc2.27) + x86_64 PC 
 - Raspbian Buster (glibc2.28) + armv7l RaspberryPi3/4
-- Tensorflow v1.15.0 or v2.0.0
+- Tensorflow v2.0.0 or v1.15.0
 - Tensorflow Lite
 - **[Bazel 0.26.1](https://github.com/PINTO0309/Bazel_bin.git)**
 - **[Bazel-Remote](https://github.com/buchgr/bazel-remote.git)**
@@ -38,7 +38,7 @@ $ cd ~
 $ git clone https://github.com/PINTO0309/Bazel_bin.git
 $ ./Bazel_bin/0.26.1/Ubuntu1604_x86_64/install.sh
 
-$ git clone -b v1.15.0 https://github.com/tensorflow/tensorflow.git
+$ git clone -b v2.0.0 https://github.com/tensorflow/tensorflow.git
 $ cd tensorflow
 $ ./configure
 
@@ -171,7 +171,7 @@ $ cd ~
 $ git clone https://github.com/PINTO0309/Bazel_bin.git
 $ ./Bazel_bin/0.26.1/Raspbian_Debian_Buster_armhf/openjdk-8-jdk/install.sh
 
-$ git clone -b v1.15.0 https://github.com/tensorflow/tensorflow.git
+$ git clone -b v2.0.0 https://github.com/tensorflow/tensorflow.git
 $ cd tensorflow
 $ ./configure
 
