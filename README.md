@@ -307,7 +307,7 @@ tflite_convert -- \
 --output_format=TFLITE \
 --inference_type=QUANTIZED_UINT8 \
 --input_arrays=input \
---output_arrays=ENet/logits_to_softmax \
+--output_arrays=ENet/fullconv/BiasAdd,ENet/logits_to_softmax \
 --target_ops=TFLITE_BUILTINS,SELECT_TF_OPS \
 --post_training_quantize
 ```
