@@ -346,3 +346,4 @@ tflite_convert -- \
 11. **[convert the checkpoint to SavedModel](https://stackoverflow.com/questions/56766639/how-to-convert-ckpt-to-pb)**  
 12. **[tensorflow/models/official/r1/mnist/mnist.py](https://github.com/tensorflow/models/blob/master/official/r1/mnist/mnist.py)**  
 13. **[tensorflowjs_converter: SavedModel file does not exist at:](https://stackoverflow.com/questions/53366921/tensorflowjs-converter-savedmodel-file-does-not-exist-at)**  
+14. **[tf.compat.v1.lite.TFLiteConverter - Convert a TensorFlow model into output_format](https://www.tensorflow.org/api_docs/python/tf/compat/v1/lite/TFLiteConverter?hl=ja)**  
