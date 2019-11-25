@@ -294,8 +294,8 @@ $ sudo bazel --host_jvm_args=-Xmx512m build \
 $ sudo chmod 777 libtensorflowlite.so
 ```
 
-## 4. How to generate a Tensorflow Lite model file with Flex Delegate enabled
-### 4-1. ENet
+## 4. How to generate a Tensorflow Lite model file with Flex Delegate enabled + Weight quantization
+### 4-1. ENet (Weight quantization enabled)
 ```bash
 $ cd ~/tensorflow/tensorflow/lite/python
 $ sudo bazel run \
@@ -311,7 +311,7 @@ tflite_convert -- \
 --target_ops=TFLITE_BUILTINS,SELECT_TF_OPS \
 --post_training_quantize
 ```
-### 4-2. Learning-to-See-Moving-Objects-in-the-Dark
+### 4-2. Learning-to-See-Moving-Objects-in-the-Dark (Weight quantization disabled)
 ```bash
 $ cd ~/tensorflow/tensorflow/lite/python
 $ sudo bazel run \
@@ -326,13 +326,20 @@ tflite_convert -- \
 --target_ops=TFLITE_BUILTINS,SELECT_TF_OPS \
 --allow_custom_ops
 ```
-## 5. Pre-built shared library
-### 5-1. For Ubuntu 18.04
+## 5. HTML visualization of .tflite files
+```bash
+$ cd ~/tensorflow
+$ sudo bazel run tensorflow/lite/tools:visualize -- \
+  ~/TensorflowLite-flexdelegate/models/enet/enet.tflite \
+  ~/TensorflowLite-flexdelegate/models/enet/enet.tflite.html
+```
+## 6. Pre-built shared library
+### 6-1. For Ubuntu 18.04
 **https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-x86_64_glibc2.27**  
-### 5-2. For Raspbian Buster
+### 6-2. For Raspbian Buster
 **https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-armv7l_glibc2.28**  
 
-## 6. Reference articles
+## 7. Reference articles
 1. **[Select TensorFlow operators to use in TensorFlow Lite](https://www.tensorflow.org/lite/guide/ops_select)**  
 2. **[Shared library libtensorflowlite.so cannot be found after building from source](https://github.com/tensorflow/tensorflow/issues/33980)**  
 3. **[How to invoke the Flex delegate for tflite interpreters?](https://stackoverflow.com/questions/57658509/how-to-invoke-the-flex-delegate-for-tflite-interpreters)**  
