@@ -1,1 +1,2 @@
-![004](../../media/004_enet.tflite.svg)
+# enet.tflite structure
+**https://raw.githack.com/PINTO0309/TensorflowLite-flexdelegate/master/models/enet/enet.tflite.html**
