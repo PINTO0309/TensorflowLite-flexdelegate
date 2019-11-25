@@ -1,1 +1,1 @@
-![004](../../media/004_enet.tflite.svg)
+![004](../../media/004_enet.tflite.jpg)
