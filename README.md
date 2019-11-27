@@ -1,6 +1,6 @@
 # TensorflowLite-flexdelegate
 
-November 22, 2019, under construction.  
+**November 27, 2019, under construction.**  
   
 TensorFlow Lite will continue to have TensorFlow Lite builtin ops optimized for mobile and embedded devices. However, TensorFlow Lite models can now use a subset of TensorFlow ops when TFLite builtin ops are not sufficient.
 
