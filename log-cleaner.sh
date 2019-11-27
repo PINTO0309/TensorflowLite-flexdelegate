@@ -2,6 +2,7 @@
 TARGETS=(
   "*.whl"
   "*.tar.gz"
+  "*.so"
 )
 
 target=$(printf " %s" "${TARGETS[@]}")
