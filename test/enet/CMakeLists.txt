@@ -8,6 +8,9 @@ set(LINK_ONLY OFF CACHE BOOL "Use pre-built library?")
 # Common build settings
 include(cmakes/common.cmake)
 
+EXECUTE_PROCESS(COMMAND uname -m COMMAND tr -d '\n' OUTPUT_VARIABLE ARCHITECTURE)
+message(STATUS "Architecture: ${ARCHITECTURE}")
+
 # Build settings for each target
 if(${BUILD_TARGET} STREQUAL PC)
 	if(WIN32)
@@ -25,7 +28,8 @@ endif()
 
 # Create Main project
 add_executable(enettest
-	main.cpp
+	${CMAKE_SOURCE_DIR}/main.cpp
+        ${CMAKE_SOURCE_DIR}/external_libs/utils/utils.cpp
 )
 
 # For OpenCV
@@ -46,7 +50,8 @@ elseif(${BUILD_TARGET} STREQUAL RASPI_NATIVE)
 else()
 	message(FATAL_ERROR "[BUILD] Invalid target")
 endif()
-target_include_directories(enettest PUBLIC ${CMAKE_SOURCE_DIR}/external_libs/tensorflow/)
+target_include_directories(enettest PUBLIC ${CMAKE_SOURCE_DIR}/external_libs/utils)
+target_include_directories(enettest PUBLIC ${CMAKE_SOURCE_DIR}/external_libs/tensorflow)
 target_include_directories(enettest PUBLIC ${CMAKE_SOURCE_DIR}/external_libs/tensorflow/tensorflow)
 target_include_directories(enettest PUBLIC ${CMAKE_SOURCE_DIR}/external_libs/tensorflow/tensorflow/lite/tools/make/downloads)
 target_include_directories(enettest PUBLIC ${CMAKE_SOURCE_DIR}/external_libs/tensorflow/tensorflow/lite/tools/make/downloads/eigen )
