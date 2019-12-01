@@ -78,9 +78,15 @@ int main()
     //return 0;
 
     // Set data to input tensor
-    float* input = interpreter->typed_input_tensor<float>(0);
+    //float* input = interpreter->typed_input_tensor<float>(0);
     //memcpy(input, image.reshape(0, 1).data, sizeof(float) * 1 * 360 * 480 * 3);
-    memcpy(input, image.data, sizeof(float) * input_array_size);
+    //memcpy(input, image.data, sizeof(float) * input_array_size);
+
+    uint8_t* input = interpreter->typed_input_tensor<uint8_t>(0);
+    std::vector<uint8_t> input_data(image.data,
+                                    image.data + (image.cols * image.rows * image.elemSize()));
+    memcpy(input, input_data.data(), input_data.size());
+
     printf("\n\n=== MEM copied ===\n");
     cv::waitKey(0);
 
@@ -89,7 +95,7 @@ int main()
     TFLITE_MINIMAL_CHECK(interpreter->Invoke() == kTfLiteOk);
     printf("\n\n=== Post-invoke Interpreter State ===\n");
     tflite::PrintInterpreterState(interpreter.get());
-    cv::waitKey(0);
+    //cv::waitKey(0);
     //return 0;
     // Get data from output tensor
     float* probs = interpreter->typed_output_tensor<float>(0);
