@@ -299,28 +299,22 @@ $ sudo chmod 777 libtensorflowlite.so
 ```bash
 $ cd ~/tensorflow/tensorflow/lite/python
 $ sudo bazel run \
---define=tflite_convert_with_select_tf_ops=true \
 --define=with_select_tf_ops=true \
 tflite_convert -- \
 --graph_def_file=enet.pb \
 --output_file=enet.tflite \
---output_format=TFLITE \
---inference_type=QUANTIZED_UINT8 \
 --input_arrays=input \
 --output_arrays=ENet/fullconv/BiasAdd,ENet/logits_to_softmax \
---target_ops=TFLITE_BUILTINS,SELECT_TF_OPS \
---post_training_quantize
+--target_ops=TFLITE_BUILTINS,SELECT_TF_OPS
 ```
 ### 4-2. Learning-to-See-Moving-Objects-in-the-Dark (Weight quantization disabled)
 ```bash
 $ cd ~/tensorflow/tensorflow/lite/python
 $ sudo bazel run \
---define=tflite_convert_with_select_tf_ops=true \
 --define=with_select_tf_ops=true \
 tflite_convert -- \
 --graph_def_file=lsmod.pb \
 --output_file=lsmod.tflite \
---output_format=TFLITE \
 --input_arrays=input \
 --output_arrays=output \
 --target_ops=TFLITE_BUILTINS,SELECT_TF_OPS \
