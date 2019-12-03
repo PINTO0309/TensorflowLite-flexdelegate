@@ -69,25 +69,46 @@ int main()
     interpreter->SetNumThreads(num_of_threads);
     TFLITE_MINIMAL_CHECK(interpreter->AllocateTensors() == kTfLiteOk);
     printf("=== Pre-invoke Interpreter State ===\n");
-    tflite::PrintInterpreterState(interpreter.get());
+    //tflite::PrintInterpreterState(interpreter.get());
 
     // Set data to input tensor
+    printf("=== MEM copy ===\n");
     float* input = interpreter->typed_input_tensor<float>(0);
-    //memcpy(input, image.reshape(0, 1).data, sizeof(float) * 1 * 360 * 480 * 3);
     memcpy(input, image.data, sizeof(float) * input_array_size);
-    printf("\n\n=== MEM copied ===\n");
 
     // Run inference
-    printf("\n\n=== Pre-invoke Interpreter State ===\n");
+    printf("=== Pre-invoke ===\n");
+    const auto& start_time = std::chrono::steady_clock::now();
     TFLITE_MINIMAL_CHECK(interpreter->Invoke() == kTfLiteOk);
-    printf("\n\n=== Post-invoke Interpreter State ===\n");
-    tflite::PrintInterpreterState(interpreter.get());
+    const std::chrono::duration<double, std::milli>& time_span = std::chrono::steady_clock::now() - start_time;
+    std::cout << "Inference time: " << time_span.count() << " ms" << std::endl;
+    printf("=== Post-invoke ===\n");
 
     // Get data from output tensor
-    float* probs = interpreter->typed_output_tensor<float>(0);
-    for (int i = 0; i < 10; i++) {
-        printf("prob of %d: %.3f\n", i, probs[i]);
+    std::vector<float> output_data;
+    const auto& output_indices = interpreter->outputs();
+    const int num_outputs = output_indices.size();
+    int out_idx = 0;
+    for (int i = 0; i < num_outputs; ++i)
+    {
+        const auto* out_tensor = interpreter->tensor(output_indices[i]);
+        assert(out_tensor != nullptr);
+        const int num_values = out_tensor->bytes / sizeof(float);
+        output_data.resize(out_idx + num_values);
+        const float* output = interpreter->typed_output_tensor<float>(i);
+        for (int j = 0; j < num_values; ++j)
+        {
+            output_data[out_idx++] = output[j];
+        }
     }
+
+    // Create segmantation map.
+    cv::Mat seg_im(cv::Size(input_tensor_shape[1], input_tensor_shape[2]), CV_8UC3);
+    LabelToColorMap(output_data, *color_map.get(), seg_im);
+
+    // output tensor size => camera resolution
+    cv::resize(seg_im, seg_im, cv::Size(480, 360));
+    seg_im = (image / 2) + (seg_im / 2);
 
     cv::waitKey(0);
     return 0;
