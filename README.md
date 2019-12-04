@@ -349,3 +349,4 @@ $ sudo bazel run tensorflow/lite/tools:visualize -- \
 13. **[tensorflowjs_converter: SavedModel file does not exist at:](https://stackoverflow.com/questions/53366921/tensorflowjs-converter-savedmodel-file-does-not-exist-at)**  
 14. **[tf.compat.v1.lite.TFLiteConverter - Convert a TensorFlow model into output_format](https://www.tensorflow.org/api_docs/python/tf/compat/v1/lite/TFLiteConverter?hl=ja)**  
 15. **[C++ API producing incorrect model metaparams](https://github.com/tensorflow/tensorflow/issues/34277)**  
+16. **[TensorFlow Lite C++ API解説 - Qiita - ornew](https://qiita.com/ornew/items/2dd72e6b63d8ca389d28)**  
