@@ -7,6 +7,7 @@ TensorFlow Lite will continue to have TensorFlow Lite builtin ops optimized for 
 ## 1. Environment
 - Ubuntu 18.04 (glibc2.27) + x86_64 PC 
 - Raspbian Buster (glibc2.28) + armv7l RaspberryPi3/4
+- Ubuntu 19.10 (glibc2.30) + armv8 RaspberryPi4
 - Tensorflow v2.1.0 or v2.0.0 or v1.15.0
 - Tensorflow Lite
 - **[Bazel 0.26.1 or 0.29.1](https://github.com/PINTO0309/Bazel_bin.git)**
