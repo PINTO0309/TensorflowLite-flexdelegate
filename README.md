@@ -329,10 +329,12 @@ $ sudo bazel run tensorflow/lite/tools:visualize -- \
   ~/TensorflowLite-flexdelegate/models/enet/enet.tflite.html
 ```
 ## 6. Pre-built shared library
-### 6-1. For Ubuntu 18.04
-**https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-x86_64_glibc2.27**  
-### 6-2. For Raspbian Buster
-**https://github.com/PINTO0309/TensorflowLite-bin/tree/master/2.0.0/cpp-flexdelegate-armv7l_glibc2.28**  
+### 6-1. For Ubuntu 18.04 x86_64
+**https://github.com/PINTO0309/TensorflowLite-flexdelegate/blob/master/so/2.0.0/download_x86-64_libtensorflowlite.so.sh**  
+### 6-2. For Raspbian Buster armv7l + RaspberryPi3/4
+**https://github.com/PINTO0309/TensorflowLite-flexdelegate/blob/master/so/2.0.0/download_armv7l_libtensorflowlite.so.sh**  
+### 6-3. For Ubuntu 19.10 aarch64 + RaspberryPi4
+**https://github.com/PINTO0309/TensorflowLite-flexdelegate/blob/master/so/2.1.0/download_ubuntu_1910_aarch64_libtensorflowlite.so.sh**  
 
 ## 7. Reference articles
 1. **[Select TensorFlow operators to use in TensorFlow Lite](https://www.tensorflow.org/lite/guide/ops_select)**  
