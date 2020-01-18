@@ -276,8 +276,6 @@ $ sudo bazel --host_jvm_args=-Xmx512m build \
 --config=monolithic \
 --config=noaws \
 --config=nohdfs \
---config=noignite \
---config=nokafka \
 --config=nonccl \
 --config=v2 \
 --define=tflite_convert_with_select_tf_ops=true \
@@ -290,6 +288,8 @@ $ sudo bazel --host_jvm_args=-Xmx512m build \
 --copt=-fomit-frame-pointer \
 --copt=-DRASPBERRY_PI \
 --host_copt=-DRASPBERRY_PI \
+--linkopt=-Wl,-latomic \
+--host_linkopt=-Wl,-latomic \
 //tensorflow/lite:libtensorflowlite.so
 ```
 ```bash
