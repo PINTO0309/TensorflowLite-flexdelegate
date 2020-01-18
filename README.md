@@ -333,7 +333,7 @@ $ sudo bazel run tensorflow/lite/tools:visualize -- \
 ### 6-1. For Ubuntu 18.04 x86_64
 **https://github.com/PINTO0309/TensorflowLite-flexdelegate/blob/master/so/2.0.0/download_x86-64_libtensorflowlite.so.sh**  
 ### 6-2. For Raspbian Buster armv7l + RaspberryPi3/4
-**https://github.com/PINTO0309/TensorflowLite-flexdelegate/blob/master/so/2.0.0/download_armv7l_libtensorflowlite.so.sh**  
+**https://github.com/PINTO0309/TensorflowLite-flexdelegate/blob/master/so/2.1.0/download_debian_buster_armhf_libtensorflowlite.so.sh**  
 ### 6-3. For Ubuntu 19.10 aarch64 + RaspberryPi4
 **https://github.com/PINTO0309/TensorflowLite-flexdelegate/blob/master/so/2.1.0/download_ubuntu_1910_aarch64_libtensorflowlite.so.sh**  
 
